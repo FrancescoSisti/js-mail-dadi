@@ -1,5 +1,10 @@
 console.log(`JS OK`);
 
+// Generare un numero random da 1 a 6, sia per il giocatore sia per il computer.
+// Stabilire il vincitore, in base a chi fa il punteggio più alto.
+// Stampiamo in pagina i due tiri e il risultato
+
+
 // Genera un numero casuale tra 1 e 6 per il giocatore
 const userChoice = Math.floor(Math.random() * 6) + 1;
 console.log(userChoice);
@@ -23,3 +28,19 @@ console.log(result);
 const resultElement = document.createElement('div');
 resultElement.textContent = `Tu hai tirato un ${userChoice}. Il computer ha tirato un ${cpuChoice}. ${result}`;
 document.body.appendChild(resultElement);
+
+// --------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+// Inventa una lista di email autorizzate
+// Chiedi all’utente la sua email, con un piccolo form.
+// controlla che sia nella lista di chi può accedere,
+// stampa un messaggio appropriato sull’esito del controllo.
+
+// Array che contiene le email autorizzate
+const emailAutorizzate = ["utente1@esempio.com", "utente2@esempio.com", "utente3@esempio.com"];
+
+// Selezioniamo gli elementi HTML necessari
+const form = document.getElementById("formEmail"); // Seleziona il form
+const risultato = document.getElementById("risultato"); // Seleziona il paragrafo per mostrare il risultato
+
+

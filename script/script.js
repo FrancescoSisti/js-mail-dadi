@@ -1,25 +1,25 @@
 console.log(`JS OK`);
 
 // Genera un numero casuale tra 1 e 6 per il giocatore
-const tiroGiocatore = Math.floor(Math.random() * 6) + 1;
-console.log(tiroGiocatore);
+const userChoice = Math.floor(Math.random() * 6) + 1;
+console.log(userChoice);
 
 // Genera un numero casuale tra 1 e 6 per il computer
-const tiroComputer = Math.floor(Math.random() * 6) + 1;
-console.log(tiroComputer);
+const cpuChoice = Math.floor(Math.random() * 6) + 1;
+console.log(cpuChoice);
 
 // Determina il vincitore
-let risultato;
-if (tiroGiocatore > tiroComputer) {
-    risultato = "Hai vinto!";
-} else if (tiroGiocatore < tiroComputer) {
-    risultato = "Ha vinto il computer!";
+let result;
+if (userChoice > cpuChoice) {
+    result = "Hai vinto!";
+} else if (userChoice < cpuChoice) {
+    result = "Ha vinto il computer!";
 } else {
-    risultato = "Pareggio!";
+    result = "Pareggio!";
 }
-console.log(risultato);
+console.log(result);
 
 // Mostra i risultati in pagina
-const risultatoElemento = document.createElement('p');
-risultatoElemento.textContent = `Tu hai tirato un ${tiroGiocatore}. Il computer ha tirato un ${tiroComputer}. ${risultato}`;
-document.body.appendChild(risultatoElemento);
+const resultElement = document.createElement('div');
+resultElement.textContent = `Tu hai tirato un ${userChoice}. Il computer ha tirato un ${cpuChoice}. ${result}`;
+document.body.appendChild(resultElement);

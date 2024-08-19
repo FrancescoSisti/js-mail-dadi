@@ -36,11 +36,9 @@ document.body.appendChild(resultElement);
 // controlla che sia nella lista di chi può accedere,
 // stampa un messaggio appropriato sull’esito del controllo.
 
-// Array che contiene le email autorizzate
+
+//Array con mail autorizzate
 const emailAutorizzate = ["utente1@esempio.com", "utente2@esempio.com", "utente3@esempio.com"];
-
-// Selezioniamo gli elementi HTML necessari
-const form = document.getElementById("formEmail"); // Seleziona il form
-const risultato = document.getElementById("risultato"); // Seleziona il paragrafo per mostrare il risultato
-
-
+//Prendo gli elementi dal DOM
+const form = document.getElementById("formEmail");
+const risultato = document.getElementById("emailResult");

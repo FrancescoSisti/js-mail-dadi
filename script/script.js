@@ -38,25 +38,25 @@ document.body.appendChild(resultElement);
 
 
 //Array con mail autorizzate
-const emailAutorizzate = ["utente1@esempio.com", "utente2@esempio.com", "utente3@esempio.com"];
+const authMails = ["utente1@esempio.com", "utente2@esempio.com", "utente3@esempio.com"];
 //Prendo gli elementi dal DOM
 const form = document.getElementById("formEmail");
-const risultato = document.getElementById("emailResult");
+const emailResult = document.getElementById("emailResult");
 
 form.addEventListener("submit", (event) => {
     event.preventDefault();
-    const emailInserita = document.getElementById("email").value;
-    let accessoConsentito = false;
+    const insMail = document.getElementById("email").value;
+    let accessGranted = false;
 
-    for (let i = 0; i < emailAutorizzate.length; i++) {
-        if (emailInserita === emailAutorizzate[i]) {
-            accessoConsentito = true;
+    for (let i = 0; i < authMails.length; i++) {
+        if (insMail === authMails[i]) {
+            accessGranted = true;
         }
     }
 
-    if (accessoConsentito) {
-        risultato.textContent = "Accesso consentito!";
+    if (accessGranted) {
+        emailResult.textContent = "Accesso consentito!";
     } else {
-        risultato.textContent = "Accesso negato.";
+        emailResult.textContent = "Accesso negato.";
     }
 });
